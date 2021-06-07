@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_margin="0dp"
+    android:background="@drawable/gradiente"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.projecttime.Menu"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_menu">
+
+
+    </fragment>
+
+    <TextView
+        android:id="@+id/espacio1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text=" " />
+
+
+    <TextView
+        android:id="@+id/txtSEXO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DEPORTE"
+         android:layout_gravity="center"
+         android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+
+        <RadioGroup
+            android:id="@+id/grupoRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio2mas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Mas de 2 Horas diarias"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+
+            <RadioButton
+                android:id="@+id/radio2menos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Menos de 2 Horas diarias"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnEnLinea"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:backgroundTint="@android:color/background_light"
+            android:drawableBottom="@drawable/guardar2222"
+            android:gravity="center"
+
+            android:text="GUARDAR" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

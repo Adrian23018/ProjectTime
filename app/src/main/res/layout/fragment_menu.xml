@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Menu"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:weightSum="3">
+
+
+        <ImageButton
+            android:id="@+id/linterna"
+            style="@style/botones"
+            android:src="@drawable/estadisticausar" />
+        <Space style="@style/espacio"/>
+
+        <ImageButton
+            android:id="@+id/login"
+            style="@style/botones"
+            android:src="@drawable/agregarsubiraa" />
+        <Space style="@style/espacio"/>
+
+        <ImageButton
+            android:id="@+id/nivel"
+            style="@style/botones"
+            android:src="@drawable/usuusar" />
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
