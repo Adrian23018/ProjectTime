@@ -21,7 +21,7 @@ public class NewActividad extends AppCompatActivity {
         setContentView(R.layout.activity_new_actividad);
 
 
-        Conexion cone= new Conexion(this, "agenda",null, 1);
+        /*Conexion cone= new Conexion(this, "agenda",null, 1);
         final int id_trabajo=54;
          db.execSQL("insert into agenda(id_agenda,nombre_trabajo)values ("+id_trabajo+",'NOMBRE_TRABAJO')");
 
@@ -30,7 +30,7 @@ public class NewActividad extends AppCompatActivity {
 
         if(cone!=null){
             System.out.println("Hubo Conexión");
-        }
+        }*/
     }
 
 
