@@ -27,13 +27,11 @@ public class NewActividad extends AppCompatActivity {
 
 
 
-       /*
+
         if(cone!=null){
             System.out.println("Hubo Conexión");
-        }*/
-
+        }
     }
-
 
 
 }
