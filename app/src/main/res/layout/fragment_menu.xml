@@ -22,6 +22,7 @@
             android:id="@+id/NuevaActividad"
             style="@style/botones"
             android:src="@drawable/newactividad" />
+
         <Space style="@style/espacio"/>
 
         <ImageButton

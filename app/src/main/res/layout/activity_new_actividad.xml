@@ -83,6 +83,14 @@
                 android:text="NO PRODUCTIVA"
                 android:layout_margin="10dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/resultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
+
         </RadioGroup>
     </LinearLayout>
 

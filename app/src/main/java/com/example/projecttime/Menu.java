@@ -17,7 +17,7 @@ import android.widget.ImageButton;
  */
 public class Menu extends Fragment {
 
-    private final int[] BOTONESMENU = {R.id.linterna, R.id.login, R.id.nivel};
+    private final int[] BOTONESMENU = {R.id.NuevaActividad, R.id.Estadisticas, R.id.Agregar};
 
 
     public Menu() {
