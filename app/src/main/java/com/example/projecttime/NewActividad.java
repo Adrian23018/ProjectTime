@@ -46,7 +46,7 @@ public class NewActividad extends AppCompatActivity {
 
         nombre1=findViewById(R.id.ediNombre);
         grupoRadio =findViewById(R.id.grupoRadio);
-        productivo = findViewById(R.id.radioNoProductiva);
+        productivo = findViewById(R.id.radioProductiva);
         Noproductivo = findViewById(R.id.radioNoProductiva);
         txtRadioSeleccionado = findViewById(R.id.resultado);
         guardar=findViewById(R.id.btnEGuardar);
@@ -127,45 +127,54 @@ public class NewActividad extends AppCompatActivity {
 
 
     public void GuardarDatos(){
-        String nombre = nombre1.getText().toString();
-        String selecionado = txtRadioSeleccionado.getText().toString();
+        String nombres = nombre1.getText().toString();
+        String selecionar = txtRadioSeleccionado.getText().toString();
 
         Conexion conexion= new Conexion(this, "ACTIVIDADES",null,1);
         SQLiteDatabase db =conexion.getWritableDatabase();
         if(db!=null){
-
+            System.out.println("Entro");
             ContentValues registroNuevo=new ContentValues();
-            registroNuevo.put("nombre", nombre);
-            registroNuevo.put("selecionado", selecionado);
+            registroNuevo.put("nombre", nombres);
+            registroNuevo.put("selecionar", selecionar);
 
-            db.insert("agenda", null,registroNuevo);
+            db.insert("agenda", null, registroNuevo);
             Toast.makeText(this, "Datos Almacenados",Toast.LENGTH_SHORT).show();
         }
 
+        /*long i = db.insert("Datos", null, registronuevo);
+
+   if(i == -1){
+        Log.e(TAG, "Inserción de datos no se realizo.");
+   }else{
+        Log.i(TAG, "Inserción de datos se realizo con exito.");
+   }*/
+
     }
 
-    public void Cargar(){
-        Conexion conexion= new Conexion(this, "ACTIVIDADES",null,1);
-        SQLiteDatabase db =conexion.getWritableDatabase();
-        if(db!=null)
-        {
-            Cursor c=db.rawQuery("select * from agenda", null);
-            int cantidad= c.getCount();
-            int i=0;
-            String[] arreglo= new String[cantidad];
+    public void Cargar() {
+
+        Conexion baseHelper = new Conexion(this, "ACTIVIDDADES", null, 1);
+        SQLiteDatabase db = baseHelper.getReadableDatabase();
+        if (db != null) {
+            Cursor c = db.rawQuery("select * from agenda", null);
+            int cantidad = c.getCount();
+            int i = 0;
+            String[] arreglo = new String[cantidad];
             if(c.moveToFirst()){
                 do{
-                    String linea=c.getInt(0)+ " " + c.getString(1)+ " " +c.getString(2);
-                    ;
+                    String linea = c.getInt(0)+" "+ c.getString(1)+" "+ c.getString(3)+" "+ c.getString(4);
                     arreglo[i] = linea;
                     i++;
-                }while(c.moveToNext());
+
+                }while (c.moveToNext());
             }
-            ArrayAdapter<String> adapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,arreglo);
+            ArrayAdapter<String>adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arreglo);
+           // ListView lista = (ListView) findViewById(R.id.lista);
             res.setAdapter(adapter);
         }
     }
-
-
-
 }
+
+
+
