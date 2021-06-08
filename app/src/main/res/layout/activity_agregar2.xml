@@ -10,8 +10,6 @@
     android:orientation="vertical"
     tools:context=".Agregar">
 
-
-
     <fragment
         android:id="@+id/menu"
         android:name="com.example.projecttime.Menu"
