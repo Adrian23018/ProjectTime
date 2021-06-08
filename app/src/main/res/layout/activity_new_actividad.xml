@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -106,7 +110,7 @@
 
 
         <Button
-            android:id="@+id/btnEnLinea"
+            android:id="@+id/btnEGuardar"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -118,8 +122,36 @@
 
             android:text="GUARDAR" />
 
+        <Button
+            android:id="@+id/btnMostar"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:backgroundTint="@android:color/background_light"
+            android:drawableBottom="@drawable/guardar2222"
+            android:gravity="center"
+
+            android:text="MOSTRAR" />
+
+
+
+
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/respuesta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=" " />
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
+</ScrollView>

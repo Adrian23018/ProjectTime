@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 public class Conexion extends SQLiteOpenHelper {
 
 
-   final String query ="CREATE TABLE agenda(id_trabajo INT, nombre_trabajo TEXT);";
+   String query ="CREATE TABLE agenda(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, selecionar TEXT);";
 
     public Conexion(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -28,7 +28,7 @@ public class Conexion extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         System.out.println("-->>> Hola bd");
-        db.execSQL("DROP TABLE IF EXISTS agenda");
-        onCreate(db);
+        //db.execSQL("DROP TABLE IF EXISTS agenda");
+        //onCreate(db);
     }
 }
